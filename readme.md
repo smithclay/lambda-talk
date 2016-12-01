@@ -2,6 +2,8 @@
 
 Uses AWS Polly to Synthesize speech in a Lambda function. Must run in a region that supports the new [text-to-speech Polly service](https://aws.amazon.com/polly/).
 
+Example: [http://lambda-talk-example.s3-website.us-east-2.amazonaws.com/](http://lambda-talk-example.s3-website.us-east-2.amazonaws.com/)
+
 ## Requirements
 
 * AWS Account
