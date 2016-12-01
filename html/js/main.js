@@ -5,8 +5,10 @@ var fetchVoice = function(speakText) {
         try {
             var json = JSON.parse(this.responseText);
             var url = json.presignedUrl;
-            var audio = new Audio(url);
-            audio.play();
+
+            // Terrible hack because the codec type can't be inferred from the signed URL.
+            Howler.codecs = function() { return true; }
+            var sound = new Howl({src: [url], autoplay: true});
         } catch (e) {
             console.log('json error: ', e);
         }
