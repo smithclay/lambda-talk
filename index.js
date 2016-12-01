@@ -32,9 +32,12 @@ var getPresignedURL = function(outputText, credentials) {
 
 exports.handler = (event, context, callback) => {
 
+  // This pulls the text to speech from the query string parameter
+  // proxied by the API Gateway.
+
+  // The maximum length is 140 characters.
   const textToSpeak = event.queryStringParameters.speakText;
-  console.log(JSON.stringify(event));
-  if (textToSpeak === undefined) {
+  if (textToSpeak === undefined || (textToSpeak.length > 140)) {
     return callback(null, {
       statusCode: 400,
       headers: {

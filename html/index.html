@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AWS Lambda + AWS Polly Text-to-Speech Serverless Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <div class="title">
+            <h2>Lambda Text-to-Speech using Polly</h2>
+        </div>
+
+        <div class="form">
+            <div class="input-elements">
+                <div class="response">
+                    <span id="response-status" class="text"></span>
+                <div>
+                <input type="text" value="Hello from AWS Polly!" class="text-field" maxlength=140 id="speakText"/>
+                <div class="submit-control">
+                    <input type="submit" value="speak" id="speakSubmit"/>
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/main.js"></script>
+        <div class="footer">
+            <a href="https://github.com/smithclay/lambda-talk">Github source</a>. HTML5 audio-capable browser required. Created by <a href="https://twitter.com/smithclay">Clay Smith</a>.
+        </div>
+    </body>
+</html>
